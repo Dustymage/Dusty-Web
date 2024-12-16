@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Processor</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container"><h1>FACEBOOK MARKETPLACE SCRAPPER</h1></div>
+
+
+    <div class="container">
+        <h1>VIDEO TUTORIAL</h1>
+        <div class="video-container">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/0N6oEmMJD6E" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <h1>FACEBOOK MARKETPLACE DATA</h1>
+
+        <label for="harFile">Upload HAR File:</label>
+        <input type="file" id="harFile" accept=".har">
+
+        <label for="htmlFile">Upload HTML File:</label>
+        <input type="file" id="htmlFile" accept=".html">
+
+        <button id="processButton">Process Files</button>
+        <button id="downloadCSV" disabled>Download CSV</button>
+        <button id="downloadExcel" disabled>Download Excel</button>
+    </div>
+    
+    <div class="container-Program">
+            <h1>Download Our Desktop App</h1>
+            <a href="./app/MAIN.exe" class="download-btn" download>Download for Windows</a>
+    </div>
+
+    <div class="footer">
+        <p>Built with ❤️ by <a href="https://www.linkedin.com/in/mohammad-jaami-mustafa-2359a21b5/">DUSTYMAGE</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="./script/scripts.js" type="module"></script>
+   
+</body>
+</html>
