@@ -72,3 +72,15 @@ document.querySelectorAll('.scroll-to-top').forEach(link => {
         });
     });
 });
+
+fetch('../pages/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+
+
+ // Check if the current page is index.html
+ if (window.location.pathname.endsWith('index.html')) {
+    document.getElementById('other-links').style.display = 'none'; // Hide other links
+}
