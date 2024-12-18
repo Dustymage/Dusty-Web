@@ -10,8 +10,47 @@
     <title>Dustymage Portfolio</title>
 </head>
 <body>
-    <div id="navbar"></div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                MJ <span>Mustafa</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+                    <a href="#" class="scroll-to-top" data-scroll="0">Home</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+                    <a href="#" class="scroll-to-top" data-scroll="900">About</a>
+                </div>
+                <div class="link-app" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <a href="#" class="scroll-to-top">Apps</a>
+                    <div class="dropdown-content">
+                        <a href="./pages/FBscrapper.html">Facebook MARKETPLACE scrapper</a>
+                        <a href="./pages/Gscrapper.html">Google Maps scrapper</a>
+                    </div>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <a href="#" class="scroll-to-top" data-scroll="1900">Services</a>
+                </div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                    <a href="#" class="scroll-to-top" data-scroll="3000">Contact</a>
+                </div>
+            </div>
 
+
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Apps</a>
+                <a href="#">Service</a>
+                <a href="#">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
     <section>
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
@@ -47,14 +86,12 @@
                         </div>
                         <div class="about-col-2">
                             <h1>About Me</h1>
-                            <p> 
-                                Hello! I'm [Your Name], a passionate and dedicated [Your Profession/Title] with a love for [Your Interests/Field of Expertise]. With over [X years] of experience in [Your Industry/Field], I have honed my skills in [List a few key skills or areas of expertise].
-
-                                I thrive on challenges and enjoy solving complex problems through innovative solutions. My journey began when I [Briefly describe how you got started in your field or a significant experience]. Since then, I have worked on various projects that have allowed me to grow both personally and professionally.
-                                
-                                In addition to my technical skills, I believe in the power of collaboration and communication. I enjoy working with diverse teams and learning from others' perspectives. My goal is to create impactful solutions that not only meet client needs but also contribute positively to the community.
-                                
-                                When I'm not working, you can find me [List a few hobbies or interests, e.g., exploring new technologies, hiking, reading, or spending time with family and friends]. I am always eager to learn and take on new challenges, so feel free to reach out if you'd like to connect!
+                            <p>
+                                A tech-savvy graduate in Computer Science and Information Technology with a strong focus on ERP systems. 
+                                I thrive on solving complex problems and enjoy tackling tech challenges. My experience includes working as a Trainee Software Developer, 
+                                where I honed my skills in Genero Language and Linux OS, and as a Private Tutor, where I taught Computer Science to students at various levels. 
+                                I also have hands-on experience in construction, which has enhanced my problem-solving abilities. In my free time, 
+                                I love brainteasers, sudoku, and exploring new places. I'm always eager to learn and connect with others in the tech community!
                             </p>
                             <div class="tab-titles">
                                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -64,25 +101,27 @@
 
                             <div class="tab-contents active-tab" id="skills">
                                 <ul>
-                                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                                    <li><span>Web Development</span><br>Creating of Web Applications, full stack application</li>
-                                    <li><span>App Development</span><br>Designing app applications</li>
+                                    <li><span>Programming Languages</span><br>Proficient in Genero Language, Object-Oriented Programming</li>
+                                    <li><span>Operating Systems</span><br>Expertise in Linux OS</li>
+                                    <li><span>ERP Systems</span><br>Valuable insights and experience with ERP systems</li>
+                                    <li><span>Teaching</span><br>Experience in teaching Computer Science at introductory and advanced levels</li>
+                                    <li><span>Problem Solving</span><br>Strong problem-solving skills demonstrated in software development and construction projects</li>
                                 </ul>
                             </div>
 
                             <div class="tab-contents" id="experience">
                                 <ul>
-                                    <li><span>2016 - 2019</span><br>wgdsgdsg</li>
-                                    <li><span>2015- 2019</span><br>gsdwe4gsdgn</li>
-                                    <li><span>xkjsdhfg sdfsfljh</span><br>gsghweaffsdf</li>
+                                    <li><span>Trainee Software Developer, XACT ERP</span><br>October 2021 – May 2022<br>Worked under pressure to meet deadlines, coding in Genero Language, bug resolution, code reviewing, and implementing new features.</li>
+                                    <li><span>Private Tutor, Remote</span><br>May 2021 – November 2022<br>Taught Computer Science to 1st and 2nd year students, utilizing IDEs and PAINT for clear understanding of programming concepts.</li>
+                                    <li><span>General Contractor, Private</span><br>May 2022 – November 2023<br>Participated in all phases of house construction, gaining knowledge in tiling, bricklaying, and plumbing, contributing to successful project completion.</li>
                                 </ul>
                             </div>
 
                             <div class="tab-contents" id="education">
                                 <ul>
-                                    <li><span>13465346</span><br>53467478356</li>
-                                    <li><span>85745345</span><br>34634623563</li>
-                                    <li><span>96756346</span><br>357825235</li>
+                                    <li><span>Bachelors Pass</span><br>Umkomaas Secondary School, Durban<br>January 2014 – December 2017</li>
+                                    <li><span>BSC - Computer Science and Information Systems and Technology</span><br>University of Kwa-Zulu Natal, Durban<br>January 2018 – December 2021</li>
+                                    <li><span>HONS - Information Systems and Technology</span><br>University of Kwa-Zulu Natal, Durban<br>January 2024 – December 2024</li>
                                 </ul>
                             </div>
                         </div>
@@ -100,35 +139,53 @@
             <div class="container-abt">
                 <h1 class="subtitle">MY Services</h1>
                 <div class="services-list">
-                    <div>
-                        <i class="fas fa-code"></i>
+                    <div class="service-item">
+                        <i class="fas fa-laptop-code"></i>
                         <h2>Web Design</h2>
-                        <p>
-                            sdgklhsgfklhfsd fshdf sdkjfsd kfjsdhf sdkjfhs ksjdhs
-                            sdflksdhfsdkfhsdf
-                            sdfsdjhfsdkfjh
-                        </p>
-                        <a href="#">learn more</a>
+                        <p>Creating visually appealing and user-friendly websites tailored to client needs.</p>
+                        <a href="#">Learn more</a>
                     </div>
-                    <div>
+                    <div class="service-item">
                         <i class="fas fa-mobile-alt"></i>
-                        <h2>app dev</h2>
-                        <p>
-                            just a place holder
-                            yahooo
-                            les go
-                        </p>
-                        <a href="#">learn more</a>
+                        <h2>App Development</h2>
+                        <p>Developing mobile and web applications that provide seamless user experiences.</p>
+                        <a href="#">Learn more</a>
                     </div>
-                    <div>
+                    <div class="service-item">
                         <i class="fas fa-chalkboard-teacher"></i>
-                        <h2>tutoring</h2>
-                        <p>
-                            45436 63463
-                            3453456346 345
-                            34563636736
-                        </p>
-                        <a href="#">learn more</a>
+                        <h2>Tutoring</h2>
+                        <p>Offering personalized tutoring sessions in Computer Science and programming concepts.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-cogs"></i>
+                        <h2>ERP System Implementation</h2>
+                        <p>Assisting businesses in implementing and optimizing ERP systems for better efficiency.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-code"></i>
+                        <h2>Software Development</h2>
+                        <p>Building custom software solutions to meet specific business requirements.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-headset"></i>
+                        <h2>Technical Support</h2>
+                        <p>Providing technical assistance and troubleshooting for software and hardware issues.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-search"></i>
+                        <h2>SEO Optimization</h2>
+                        <p>Enhancing website visibility and search engine rankings through effective SEO strategies.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>Data Analysis</h2>
+                        <p>Analyzing data to provide insights and support decision-making processes.</p>
+                        <a href="#">Learn more</a>
                     </div>
                 </div>
             </div>
