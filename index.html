@@ -17,10 +17,10 @@
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-                    <a href="#" class="scroll-to-top" data-scroll="0">Home</a>
+                    <a href="#home-section" class="scroll-to-top">Home</a>
                 </div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-                    <a href="#" class="scroll-to-top" data-scroll="900">About</a>
+                    <a href="#about-section" class="scroll-to-top">About</a>
                 </div>
                 <div class="link-app" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
                     <a href="#" class="scroll-to-top">Apps</a>
@@ -30,14 +30,20 @@
                     </div>
                 </div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
-                    <a href="#" class="scroll-to-top" data-scroll="1900">Services</a>
+                    <a href="#services-section" class="scroll-to-top">Services</a>
                 </div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
-                    <a href="#" class="scroll-to-top" data-scroll="3000">Contact</a>
+                    <a href="#contact-section" class="scroll-to-top">Contact</a>
                 </div>
             </div>
 
         </div>
+
+        <!---more to my page
+        
+            give functionality to the below
+        
+        -->
 
         <i id="dropdownIcon" class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         <div class="dropdown">
@@ -51,7 +57,7 @@
             </div>
         </div>
     </nav>
-    <section>
+    <section id="home-section">
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
                 <img src="./main-website-assets/main.png" alt="mySelf">
@@ -131,13 +137,14 @@
         </div>
     </section>
 
-    <!-----------------------     https://youtu.be/0YFrGy_mzjY  @44.27 create the service section and than the contact me section!  --->
 
     <!---------SERVICES---------->
-    <section>
+    <section id="services-section">
         <div id="services">
             <div class="container-abt">
                 <h1 class="subtitle">MY Services</h1>
+            </div>
+            <div class="container-abt">
                 <div class="services-list">
                     <div class="service-item">
                         <i class="fas fa-laptop-code"></i>
@@ -194,13 +201,37 @@
     </section>
 
     <!---------Contact Me---------->
-    <section>
-
-
+    <section id="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Get in Touch</h1>
+                <p>Have a question or want to work together? I'd love to hear from you.</p>
+            </div>
+    
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2>Send a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="toast" class="toast"></div>
     </section>
 
 
     <!---more to my page-->
+    
 
     <!--
     

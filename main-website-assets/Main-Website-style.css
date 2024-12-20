@@ -145,10 +145,11 @@ nav{
 
 
 
-section{
-    width: 100%;
-    height: 90vh;
+section {
+    padding: 20px;
+    min-height: 100vh; /* Ensures each section takes at least the full height of the viewport */
 }
+
 .main-container{
     width: 100%;
     height: 100%;
@@ -247,9 +248,11 @@ section{
 }
 
 
-.container-abt{
-    padding: 10px 10%;
-    margin-top: 50px;
+.container-abt {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 0px 10%;
 }
 
 #about {
@@ -425,7 +428,154 @@ section{
 }
 
 
+/*contact me*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-header h1 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.contact-header p {
+    font-size: 1.125rem;
+    color: #ababab;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form-container {
+    background: #262626;
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.5s;
+}
+
+.contact-form-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #077b32;
+}
+
+.contact-form-container h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-shadow: 0 0 5px #077b32;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #077b32;
+    box-shadow: 0 0 5px #077b32;
+}
+
+.submit-button {
+    background-color: #077b32;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 120%;
+    cursor: pointer;
+    transition: 0.2s linear;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    color: #077b32;
+    border: 2px solid #077b32;
+    background-color: transparent;
+    box-shadow: 0 0 40px #077b32;
+}
+
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: #077b32;
+    color: white;
+    border-radius: 0.375rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-header h1 {
+        font-size: 40px;
+    }
+    
+    .contact-form-container {
+        padding: 20px;
+    }
+}
+/*contact me*/
 
 @media (max-width:884px) {
     nav .logo{
@@ -487,4 +637,16 @@ section{
     .services-list {
         grid-template-columns: 1fr; /* One column on small screens */
     }
+}
+
+
+@media (min-width: 768px) {
+    .container-abt {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: space-between; /* Space out items */
+    }
+}
+
+html {
+    scroll-padding-top: 60px; /* Adjust this value to the height of your navbar */
 }

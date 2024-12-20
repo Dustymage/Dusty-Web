@@ -58,17 +58,63 @@ function opentab(tabname){
 }
 
 
-document.querySelectorAll('.scroll-to-top').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default anchor click behavior
-        
-        // Get the scroll position from the data-scroll attribute
-        const scrollToPosition = parseInt(this.getAttribute('data-scroll'), 10); // Convert to integer
 
-        // Scroll to the specified position
-        window.scrollTo({
-            top: scrollToPosition,
-            behavior: 'smooth' // Smooth scroll
+document.querySelectorAll('a.scroll-to-top').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
 });
+
+
+//link to the google sheets page --> CONTACT ME SECTION
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // Replace this URL with your Google Apps Script Web App URL
+
+    //https://docs.google.com/spreadsheets/d/19ryH6MVGwQX8e9Jz4mX5ms4NTT_wQDMDoUy5OvklwVA/edit?gid=0#gid=0
+    //19ryH6MVGwQX8e9Jz4mX5ms4NTT_wQDMDoUy5OvklwVA
+
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx_eWoYNlrM5i9szYJ7pVcxVf3H2QeobGFTKSF_7fXVfqdmCBdTHRYGdlJ4YzHs0jWg/exec';
+
+    try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        // Show success message
+        showToast('Message sent successfully!');
+        
+        // Reset form
+        this.reset();
+    } catch (error) {
+        showToast('Error sending message. Please try again.', 'error');
+    }
+});
+
+function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.style.backgroundColor = type === 'success' ? '#077b32' : '#ef4444';
+    toast.classList.add('show');
+    
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
