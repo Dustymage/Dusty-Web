@@ -650,3 +650,83 @@ section {
 html {
     scroll-padding-top: 60px; /* Adjust this value to the height of your navbar */
 }
+
+
+/* Projects Section Styles */
+#projects {
+    padding: 30px 0;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Changed to exactly 3 columns */
+    grid-gap: 20px;  /* Reduced gap to allow more space for content */
+    margin-top: 50px;
+    padding: 0 20px;  /* Added padding for better edge spacing */
+}
+
+.project-item {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.project-item img {
+    width: 50%;
+    display: block;  /* Makes the image a block element */
+    margin: 0 auto 15px;  /* Centers horizontally and keeps bottom margin */
+    border-radius: 5px;
+}
+
+.project-item h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.project-preview {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.project-item:hover {
+    background: #00d906;
+    transform: translateY(-10px);
+}
+
+.project-item:hover .project-details {
+    max-height: 500px;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    background: #262626;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background 0.5s;
+}
+
+.project-link:hover {
+    background: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .projects-list {
+        grid-template-columns: 1fr;
+    }
+}
